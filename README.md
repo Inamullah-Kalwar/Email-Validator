@@ -15,7 +15,7 @@ This Python script uses Selenium to validate a list of email addresses by attemp
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/Email-Validator.git
+   git clone https://github.com/Inamullah-Kalwar/Email-Validator.git
    cd Email-Validator
    ```
 
