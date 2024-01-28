@@ -1,6 +1,10 @@
+print("Loading dependencies...")
 import os
+print(" - Imported os")
 import pandas as pd
+print(" - Imported pandas")
 import time
+print(" - Imported time")
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -8,6 +12,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from tqdm import tqdm
+print(" - Imported selenium and tqdm\n")
 
 login_url = "https://login.microsoftonline.com/"
 
@@ -26,7 +31,7 @@ def check_email_validity(email, driver, df, row_index):
 
     try:
         error_element = driver.find_element(By.ID, "usernameError")
-        is_valid = False  
+        is_valid = False
     except:
         is_valid = True
 
@@ -44,6 +49,7 @@ if not os.path.isfile(csv_file_path):
     csv_file_path = input("Please enter the full path to your CSV file: ")
 
 # Load the CSV file
+print(f"\nLoading CSV file: {csv_file_path}")
 df = pd.read_csv(csv_file_path)
 
 df['Status'] = ''
@@ -52,6 +58,7 @@ valid_count = 0
 invalid_count = 0
 
 # Open a single browser window
+print("\nOpening Chrome WebDriver...")
 driver = webdriver.Chrome()
 
 print("\nProcessing...")
@@ -67,6 +74,7 @@ with tqdm(total=len(df), desc="Validating Emails", bar_format="{l_bar}{bar}| {n_
         pbar.update(1)
 
 # Close the browser window
+print("\nClosing Chrome WebDriver...")
 driver.quit()
 
 # Display summary
