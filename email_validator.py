@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import time
 from selenium import webdriver
@@ -48,6 +49,10 @@ def check_email_validity(email, df, row_index):
     df.to_csv("highlighted_emails.csv", index=False, escapechar='\\')
 
 csv_file_path = "emails.csv"
+if not os.path.isfile(csv_file_path):
+    print("The 'emails.csv' file is not found in the current directory.")
+    csv_file_path = input("Please enter the full path to your CSV file: ")
+
 df = pd.read_csv(csv_file_path)
 
 df['Status'] = ''
