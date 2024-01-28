@@ -7,7 +7,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from termcolor import colored  
+from colorama import init, Fore, Back, Style
+
+init(autoreset=True)
 
 login_url = "https://login.microsoftonline.com/"
 
@@ -38,12 +40,10 @@ def check_email_validity(email, df, row_index):
     driver.quit()
 
     if is_valid:
-        print(colored(f"Email {email} is valid!", 'green'))  
-
+        print(Fore.GREEN + f"Email {email} is valid!")
         df.at[row_index, 'Status'] = 'Valid'
     else:
-        print(colored(f"Email {email} is invalid!", 'red'))  
-
+        print(Fore.RED + f"Email {email} is invalid!")
         df.at[row_index, 'Status'] = 'Invalid'
 
     df.to_csv("highlighted_emails.csv", index=False, escapechar='\\')
