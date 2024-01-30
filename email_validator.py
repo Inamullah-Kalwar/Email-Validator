@@ -82,3 +82,5 @@ print("\nSummary:")
 print(f"Total emails: {len(df)}")
 print(f"Valid emails: {valid_count}")
 print(f"Invalid emails: {invalid_count}")
+
+input("\nPress Enter to exit.")
