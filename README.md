@@ -1,48 +1,52 @@
 # Email Validator
 
-## Description
+🌐 **Email Validator:** A Python script for email address validation using Microsoft Online interaction. Includes a standalone executable for ease of use.
 
-This Python script uses Selenium to validate a list of email addresses by attempting to log in to Microsoft accounts. It checks the validity of each email and highlights the results in both the console and a CSV file.
+## How to Use
 
-## Features
+### Running the Script
 
-- Validates email addresses using Microsoft login.
-- Highlights valid and invalid emails.
-- Prints real-time results in the console.
-- Saves results in a CSV file with color-coded formatting.
-
-## Instructions
-
-1. **Clone the Repository:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Inamullah-Kalwar/Email-Validator.git
    cd Email-Validator
    ```
 
-2. **Install Dependencies:**
+2. **Install dependencies:**
    ```bash
-   pip install selenium pandas termcolor
+   pip install -r requirements.txt
    ```
 
-3. **Run the Script:**
+3. **Run the script:**
    ```bash
-   python email_validator.py
+   python email_validator_script.py
    ```
 
-4. **Results:**
-   - Real-time validation results will be displayed in the console.
-   - The updated CSV file, "highlighted_emails.csv," will contain color-coded email statuses.
+4. **Input CSV file path:**
+   - The script will prompt for the path to your CSV file containing email addresses.
 
-## Usage
+5. **View results:**
+   - The script will validate emails and display a summary of valid and invalid addresses.
 
-- Add your list of emails to "emails.csv" (one per line).
-- Customize the script if needed, e.g., specifying the path to your ChromeDriver executable.
-- Run the script and observe real-time email validation results.
+### Standalone Executable
 
-## Contributors
+1. **Download the release:**
+   - Visit [Releases](https://github.com/Inamullah-Kalwar/Email-Validator/releases).
+   - Download the zip file for version 1.0.0.
 
-- [Inamullah Kalwar](https://github.com/Inamullah-Kalwar)
+2. **Extract files:**
+   - Extract contents and run `Email_Validator.exe`.
 
-## License
+3. **Input CSV file path:**
+   - The executable will prompt for the path to your CSV file.
 
-This project is licensed under the [MIT License](LICENSE).
+4. **View results:**
+   - Get a summary of valid and invalid emails.
+
+## Feedback and Support
+
+If you encounter issues or have suggestions, [create an issue](https://github.com/Inamullah-Kalwar/Email-Validator/issues) on GitHub.
+
+🙌 **Thank you for using Email Validator!**
+
+— Inamullah Kalwar
