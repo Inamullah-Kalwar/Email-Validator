@@ -18,7 +18,7 @@
 
 3. **Run the script:**
    ```bash
-   python email_validator_script.py
+   python email_validator.py
    ```
 
 4. **Input CSV file path:**
