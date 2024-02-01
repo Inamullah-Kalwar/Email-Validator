@@ -14,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from tqdm import tqdm
 print(" - Imported selenium and tqdm\n")
 
-login_url = "https://login.microsoftonline.com/"
+login_url = "https://login.live.com/"
 
 def check_email_validity(email, driver, df, row_index):
     driver.get(login_url)
